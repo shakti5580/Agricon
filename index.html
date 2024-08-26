@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agricon</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Agricon - Connecting Farmers, Retailers, and Consumers</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="flex flex-col min-h-[100dvh]">
-    <header class="px-4 lg:px-6 h-14 flex items-center">
+<body class="bg-[hsl(var(--background))] text-[hsl(var(--foreground))]">
+  <div class="flex flex-col min-h-screen">
+    <header class="px-4 lg:px-6 h-14 flex items-center border-b border-[hsl(var(--border))]">
       <a class="flex items-center justify-center" href="#">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -25,60 +26,60 @@
           <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
           <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
         </svg>
-        <span class="text-xl font-bold">Agricon</span>
+        <span class="text-xl font-bold ml-2">Agricon</span>
       </a>
       <nav class="ml-auto flex gap-4 sm:gap-6">
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">Shop</a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">Register (Farmer)</a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">About</a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">Contact</a>
+        <a class="text-sm font-medium hover:underline underline-offset-4" href="#shop">Shop</a>
+        <a class="text-sm font-medium hover:underline underline-offset-4" href="#register">Register (Farmer)</a>
+        <a class="text-sm font-medium hover:underline underline-offset-4" href="#about">About</a>
+        <a class="text-sm font-medium hover:underline underline-offset-4" href="#contact">Contact</a>
       </nav>
     </header>
     <main class="flex-1">
-      <section class="w-full py-12 md:py-24 lg:py-32 bg-primary">
-        <div class="container px-4 md:px-6">
+      <section class="w-full py-12 md:py-24 lg:py-32 bg-[hsl(var(--primary))]">
+        <div class="container mx-auto px-4 md:px-6">
           <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div class="flex flex-col justify-center space-y-4">
               <div class="space-y-2">
-                <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary-foreground">
+                <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-[hsl(var(--primary-foreground))]">
                   Connecting Farmers Directly to Retailers and Consumers
                 </h1>
-                <p class="max-w-[600px] text-primary-foreground/80 md:text-xl">
+                <p class="max-w-[600px] text-[hsl(var(--primary-foreground))]/80 md:text-xl">
                   Agricon is revolutionizing the way farmers, retailers, and consumers interact. Our platform enables
                   direct connections, ensuring fresh produce, fair prices, and sustainable practices.
                 </p>
               </div>
               <div class="flex flex-col gap-2 min-[400px]:flex-row">
                 <a
-                  class="inline-flex h-10 items-center justify-center rounded-md bg-primary-foreground px-8 text-sm font-medium text-primary shadow transition-colors hover:bg-primary-foreground/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  href="#"
+                  class="inline-flex h-10 items-center justify-center rounded-md bg-[hsl(var(--primary-foreground))] px-8 text-sm font-medium text-[hsl(var(--primary))] shadow transition-colors hover:bg-[hsl(var(--primary-foreground))]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[hsl(var(--ring))] disabled:pointer-events-none disabled:opacity-50"
+                  href="#shop"
                 >
                   Shop Now
                 </a>
                 <a
-                  class="inline-flex h-10 items-center justify-center rounded-md border border-primary-foreground bg-primary px-8 text-sm font-medium shadow-sm transition-colors hover:bg-primary-foreground hover:text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  href="#"
+                  class="inline-flex h-10 items-center justify-center rounded-md border border-[hsl(var(--primary-foreground))] bg-[hsl(var(--primary))] px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[hsl(var(--primary-foreground))] hover:text-[hsl(var(--primary))] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[hsl(var(--ring))] disabled:pointer-events-none disabled:opacity-50"
+                  href="#learn-more"
                 >
                   Learn More
                 </a>
               </div>
             </div>
             <img
-              src="/placeholder.svg"
+              src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800&q=80"
               width="550"
               height="550"
-              alt="Hero"
+              alt="Scenic farm landscape with green fields and a red barn"
               class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
             />
           </div>
         </div>
       </section>
-      <section class="w-full py-12 md:py-24 lg:py-32">
-        <div class="container px-4 md:px-6">
+      <section id="about" class="w-full py-12 md:py-24 lg:py-32">
+        <div class="container mx-auto px-4 md:px-6">
           <div class="flex flex-col items-center justify-center space-y-4 text-center">
             <div class="space-y-2">
               <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">The Agricon Advantage</h2>
-              <p class="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p class="max-w-[900px] text-[hsl(var(--muted-foreground))] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Agricon's platform connects farmers directly with retailers and consumers, ensuring fresh produce,
                 fair prices, and sustainable practices.
               </p>
@@ -90,7 +91,7 @@
                 <li>
                   <div class="grid gap-1">
                     <h3 class="text-xl font-bold">Fresh Produce</h3>
-                    <p class="text-muted-foreground">
+                    <p class="text-[hsl(var(--muted-foreground))]">
                       Enjoy the freshest fruits and vegetables, directly sourced from local farmers.
                     </p>
                   </div>
@@ -98,7 +99,7 @@
                 <li>
                   <div class="grid gap-1">
                     <h3 class="text-xl font-bold">Fair Prices</h3>
-                    <p class="text-muted-foreground">
+                    <p class="text-[hsl(var(--muted-foreground))]">
                       Eliminate middlemen and enjoy fair, transparent pricing for both farmers and consumers.
                     </p>
                   </div>
@@ -106,7 +107,7 @@
                 <li>
                   <div class="grid gap-1">
                     <h3 class="text-xl font-bold">Sustainable Practices</h3>
-                    <p class="text-muted-foreground">
+                    <p class="text-[hsl(var(--muted-foreground))]">
                       Support local agriculture and reduce your carbon footprint with Agricon's sustainable model.
                     </p>
                   </div>
@@ -114,47 +115,47 @@
               </ul>
             </div>
             <img
-              src="/placeholder.svg"
+              src="https://images.unsplash.com/photo-1592321675774-3de57f3ee0dc?w=800&q=80"
               width="550"
               height="310"
-              alt="Image"
+              alt="Farmer holding fresh vegetables in a field"
               class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
             />
           </div>
         </div>
       </section>
-      <section class="w-full py-12 md:py-24 lg:py-32 bg-muted">
-        <div class="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+      <section id="benefits" class="w-full py-12 md:py-24 lg:py-32 bg-[hsl(var(--muted))]">
+        <div class="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
           <div class="space-y-2">
             <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
               Benefits for Farmers, Retailers, and Consumers
             </h2>
-            <p class="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p class="max-w-[600px] text-[hsl(var(--muted-foreground))] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Agricon's platform creates a win-win-win scenario for all stakeholders, ensuring fresh produce, fair
               prices, and sustainable practices.
             </p>
           </div>
           <div class="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
             <a
-              class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-              href="#"
+              class="inline-flex h-10 items-center justify-center rounded-md bg-[hsl(var(--primary))] px-8 text-sm font-medium text-[hsl(var(--primary-foreground))] shadow transition-colors hover:bg-[hsl(var(--primary))]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[hsl(var(--ring))] disabled:pointer-events-none disabled:opacity-50"
+              href="#shop"
             >
               Shop Now
             </a>
             <a
-              class="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-              href="#"
+              class="inline-flex h-10 items-center justify-center rounded-md border border-[hsl(var(--input))] bg-[hsl(var(--background))] px-8 text-sm font-medium shadow-sm transition-colors hover:bg-[hsl(var(--accent))] hover:text-[hsl(var(--accent-foreground))] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[hsl(var(--ring))] disabled:pointer-events-none disabled:opacity-50"
+              href="#learn-more"
             >
               Learn More
             </a>
           </div>
         </div>
       </section>
-      <section class="w-full py-12 md:py-24 lg:py-32">
-        <div class="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+      <section id="team" class="w-full py-12 md:py-24 lg:py-32">
+        <div class="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div class="space-y-3">
             <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">Meet the Agricon Team</h2>
-            <p class="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p class="mx-auto max-w-[600px] text-[hsl(var(--muted-foreground))] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Our passionate team is dedicated to revolutionizing the agricultural industry and creating a more
               sustainable future.
             </p>
@@ -162,43 +163,67 @@
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             <div class="flex flex-col items-center space-y-2">
               <img
-                src="/placeholder.svg"
+                src="https://i.pravatar.cc/150?img=1"
                 width="80"
                 height="80"
-                alt="Team Member"
+                alt="Jane Doe"
                 class="rounded-full"
               />
               <p class="font-semibold">Jane Doe</p>
-              <p class="text-sm text-muted-foreground">CEO</p>
+              <p class="text-sm text-[hsl(var(--muted-foreground))]">CEO</p>
             </div>
             <div class="flex flex-col items-center space-y-2">
               <img
-                src="/placeholder.svg"
+                src="https://i.pravatar.cc/150?img=2"
                 width="80"
                 height="80"
-                alt="Team Member"
+                alt="John Smith"
                 class="rounded-full"
               />
               <p class="font-semibold">John Smith</p>
-              <p class="text-sm text-muted-foreground">CTO</p>
+              <p class="text-sm text-[hsl(var(--muted-foreground))]">CTO</p>
             </div>
-            <!-- Add more team members as needed -->
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="https://i.pravatar.cc/150?img=3"
+                width="80"
+                height="80"
+                alt="Emily Johnson"
+                class="rounded-full"
+              />
+              <p class="font-semibold">Emily Johnson</p>
+              <p class="text-sm text-[hsl(var(--muted-foreground))]">COO</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+              <img
+                src="https://i.pravatar.cc/150?img=4"
+                width="80"
+                height="80"
+                alt="Michael Brown"
+                class="rounded-full"
+              />
+              <p class="font-semibold">Michael Brown</p>
+              <p class="text-sm text-[hsl(var(--muted-foreground))]">Head of Marketing</p>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="w-full border-t border-muted py-4">
-      <div class="container flex flex-col items-center px-4 md:px-6">
-        <p class="text-sm text-muted-foreground">
-          &copy; 2024 Agricon. All rights reserved.
+    <footer class="w-full border-t border-[hsl(var(--muted))] py-6 md:py-0">
+      <div class="container mx-auto flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row md:py-0">
+        <p class="text-center text-sm leading-loose text-[hsl(var(--muted-foreground))] md:text-left">
+          © 2024 Agricon. All rights reserved.
         </p>
-        <nav class="flex gap-4 mt-2">
-          <a class="text-sm text-muted-foreground hover:underline" href="#">Privacy Policy</a>
-          <a class="text-sm text-muted-foreground hover:underline" href="#">Terms of Service</a>
+        <nav class="flex gap-4 sm:gap-6">
+          <a class="text-sm font-medium hover:underline underline-offset-4" href="#privacy">
+            Privacy Policy
+          </a>
+          <a class="text-sm font-medium hover:underline underline-offset-4" href="#terms">
+            Terms of Service
+          </a>
         </nav>
       </div>
     </footer>
   </div>
 </body>
 </html>
-
