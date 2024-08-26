@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agricon</title>
+  <style>
+    :root {
+      --background: hsl(36, 39%, 88%);
+      --foreground: hsl(36, 45%, 15%);
+      --primary: hsl(36, 45%, 70%);
+      --primary-foreground: hsl(36, 45%, 11%);
+      --secondary: hsl(40, 35%, 77%);
+      --secondary-foreground: hsl(36, 45%, 25%);
+      --accent: hsl(36, 64%, 57%);
+      --accent-foreground: hsl(36, 72%, 17%);
+      --destructive: hsl(0, 84%, 37%);
+      --destructive-foreground: hsl(0, 0%, 98%);
+      --muted: hsl(36, 33%, 75%);
+      --muted-foreground: hsl(36, 45%, 25%);
+      --card: hsl(36, 46%, 82%);
+      --card-foreground: hsl(36, 45%, 20%);
+      --popover: hsl(0, 0%, 100%);
+      --popover-foreground: hsl(240, 10%, 3.9%);
+      --border: hsl(36, 45%, 60%);
+      --input: hsl(36, 45%, 60%);
+      --ring: hsl(36, 45%, 30%);
+      --chart-1: hsl(25, 34%, 28%);
+      --chart-2: hsl(26, 36%, 34%);
+      --chart-3: hsl(28, 40%, 40%);
+      --chart-4: hsl(31, 41%, 48%);
+      --chart-5: hsl(35, 43%, 53%);
+      --radius: 0rem;
+    }
+    img[src="/placeholder.svg"],
+    img[src="/placeholder-user.jpg"] {
+      filter: sepia(0.3) hue-rotate(-24deg) saturate(0.5) opacity(0.8);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'DM Sans', sans-serif;
+    }
+    body {
+      font-family: 'Space Mono', monospace;
+    }
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .min-h-[100dvh] { min-height: 100dvh; }
+    .h-14 { height: 3.5rem; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .text-xl { font-size: 1.25rem; }
+    .font-bold { font-weight: 700; }
+    .text-sm { font-size: 0.875rem; }
+    .font-medium { font-weight: 500; }
+    .hover\:underline:hover { text-decoration: underline; }
+    .underline-offset-4 { text-underline-offset: 4px; }
+    .ml-auto { margin-left: auto; }
+    .gap-4 { gap: 1rem; }
+    .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+    .md\:py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+    .lg\:py-32 { padding-top: 8rem; padding-bottom: 8rem; }
+    .bg-[url('/hero-bg.jpg')] { background-image: url('/hero-bg.jpg'); }
+    .bg-cover { background-size: cover; }
+    .bg-center { background-position: center; }
+    .container { width: 100%; max-width: 1280px; margin: 0 auto; }
+    .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+    .text-4xl { font-size: 2.25rem; }
+    .text-5xl { font-size: 3rem; }
+    .text-6xl { font-size: 3.75rem; }
+    .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+    .bg-primary { background-color: hsl(var(--primary)); }
+    .text-primary-foreground { color: hsl(var(--primary-foreground)); }
+    .bg-background { background-color: hsl(var(--background)); }
+    .bg-muted { background-color: hsl(var(--muted)); }
+    .rounded-md { border-radius: 0.375rem; }
+    .shadow { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
+    .transition-colors { transition: background-color 0.2s; }
+    .focus-visible\:outline-none:focus-visible { outline: none; }
+    .focus-visible\:ring-1:focus-visible { box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
+    .focus-visible\:ring-ring:focus-visible { box-shadow: 0 0 0 1px hsl(var(--ring)); }
+    .border-t { border-top-width: 1px; }
+    .text-xs { font-size: 0.75rem; }
+    .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+    .inline-flex { display: inline-flex; }
+    .h-10 { height: 2.5rem; }
+    .h-9 { height: 2.25rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .px-8 { padding-left: 2rem; padding-right: 2rem; }
+    .rounded-lg { border-radius: 0.5rem; }
+    .bg-primary/90 { background-color: rgba(0, 0, 0, 0.9); }
+    .disabled\:pointer-events-none:disabled { pointer-events: none; }
+    .disabled\:opacity-50:disabled { opacity: 0.5; }
+    .max-w-3xl { max-width: 48rem; }
+    .text-xl/relaxed { line-height: 1.75rem; }
+    .sm\:text-4xl { font-size: 2.25rem; }
+    .md\:text-5xl { font-size: 3rem; }
+    .xl\:text-[3.4rem] { font-size: 3.4rem; }
+    .2xl\:text-[3.75rem] { font-size: 3.75rem; }
+    .inline-block { display: inline-block; }
+    .rounded-lg { border-radius: 0.5rem; }
+    .text-sm { font-size: 0.875rem; }
+    .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .text-xs { font-size: 0.75rem; }
+    .hover\:underline:hover { text-decoration: underline; }
+    .underline-offset-4 { text-underline-offset: 4px; }
+    .border-input { border-color: hsl(var(--input)); }
+    .hover\:bg-accent:hover { background-color: hsl(var(--accent)); }
+    .hover\:text-accent-foreground:hover { color: hsl(var(--accent-foreground)); }
+    .bg-background { background-color: hsl(var(--background)); }
+  </style>
+</head>
+<body>
+  <div class="flex flex-col min-h-[100dvh]">
+    <header class="px-4 lg:px-6 h-14 flex items-center">
+      <a class="flex items-center justify-center" href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-6 w-6"
+        >
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+        </svg>
+        <span class="text-xl font-bold">Agricon</span>
+      </a>
+      <nav class="ml-auto flex gap-4 sm:gap-6">
+        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">Shop</a>
+        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">Register</a>
+        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">About</a>
+        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">Contact</a>
+      </nav>
+    </header>
+    <main class="flex-1">
+      <section class="w-full py-12 md:py-24 lg:py-32 bg-[url('/hero-bg.jpg')] bg-cover bg-center">
+        <div class="container px-4 md:px-6 text-center">
+          <div class="max-w-3xl mx-auto space-y-4">
+            <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Agricon</h1>
+            <p class="text-xl text-muted-foreground">Connecting farmers directly with retailers and consumers.</p>
+            <p class="text-muted-foreground">
+              Agricon is a platform that empowers farmers to sell their products directly to retailers and consumers,
+              cutting out the middleman and ensuring fair prices for all.
+            </p>
+            <div class="flex flex-col gap-2 min-[400px]:flex-row justify-center">
+              <a
+                class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                href="#"
+              >
+                Shop Now
+              </a>
+              <a
+                class="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                href="#"
+              >
+                Register
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        <div class="container px-4 md:px-6">
+          <div class="grid gap-10 sm:px-10 md:gap-16 md:grid-cols-2">
+            <div class="space-y-4">
+              <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Mission</div>
+              <h2 class="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+                Empowering Farmers, Connecting Communities
+              </h2>
+              <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
+                Agricon's mission is to create a more equitable and sustainable food system by connecting farmers
+                directly with retailers and consumers. We believe that by eliminating the middleman, we can ensure
+                that farmers receive fair prices for their products and that consumers have access to fresh,
+                high-quality produce.
+              </p>
+            </div>
+            <div class="flex flex-col items-start space-y-4">
+              <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Benefits</div>
+              <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
+                Agricon offers a range of benefits to both farmers and consumers. Farmers can sell their products
+                directly to retailers and consumers, cutting out the middleman and ensuring fair prices. Consumers can
+                access fresh, locally sourced produce at competitive prices, while supporting their local farming
+                community.
+              </p>
+              <a
+                class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                href="#"
+              >
+                Register as a Farmer
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full py-12 md:py-24 lg:py-32">
+        <div class="container px-4 md:px-6">
+          <div class="grid gap-10 sm:px-10 md:gap-16 md:grid-cols-2">
+            <div class="space-y-4">
+              <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">How it Works</div>
+              <h2 class="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+                A Simple, Streamlined Process
+              </h2>
+              <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
+                Agricon's platform is designed to be easy to use for both farmers and consumers. Farmers can create an
+                account, list their products, and start selling directly to retailers and consumers. Consumers can
+                browse the platform, place orders, and have their products delivered directly to their doorstep.
+              </p>
+              <a
+                class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                href="#"
+              >
+                Start Shopping
+              </a>
+            </div>
+            <div class="flex flex-col items-start space-y-4">
+              <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Why Agricon?</div>
+              <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
+                Agricon was founded with the goal of creating a more equitable and sustainable food system. By
+                connecting farmers directly with retailers and consumers, we're able to eliminate the middleman and
+                ensure that both farmers and consumers get a fair deal. Our platform is designed to be user-friendly
+                and accessible, making it easy for everyone to participate in the local food economy.
+              </p>
+              <a
+                class="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                href="#"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <p class="text-xs text-muted-foreground">© 2024 Agricon. All rights reserved.</p>
+      <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+        <a class="text-xs hover:underline underline-offset-4" href="#">Terms of Service</a>
+        <a class="text-xs hover:underline underline-offset-4" href="#">Privacy</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>
