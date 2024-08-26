@@ -7,118 +7,73 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="flex flex-col min-h-[100dvh]">
-    <header class="px-4 lg:px-6 h-14 flex items-center">
-      <a class="flex items-center justify-center" href="#">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-6 w-6"
-        >
+  <div class="flex flex-col min-h-screen">
+    <header class="header">
+      <a class="logo" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
           <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
           <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
         </svg>
-        <span class="text-xl font-bold">Agricon</span>
+        <span class="logo-text">Agricon</span>
       </a>
-      <nav class="ml-auto flex gap-4 sm:gap-6">
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">Shop</a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">Register</a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">About</a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="#">Contact</a>
+      <nav class="main-nav">
+        <a href="#">Shop</a>
+        <a href="#">Register</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
       </nav>
     </header>
-    <main class="flex-1">
-      <section class="w-full py-12 md:py-24 lg:py-32 bg-[url('/hero-bg.jpg')] bg-cover bg-center">
-        <div class="container px-4 md:px-6 text-center">
-          <div class="max-w-3xl mx-auto space-y-4">
-            <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Agricon</h1>
-            <p class="text-xl text-muted-foreground">Connecting farmers directly with retailers and consumers.</p>
-            <p class="text-muted-foreground">
-              Agricon is a platform that empowers farmers to sell their products directly to retailers and consumers,
-              cutting out the middleman and ensuring fair prices for all.
-            </p>
-            <div class="flex flex-col gap-2 min-[400px]:flex-row justify-center">
-              <a class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" href="#">
-                Shop Now
-              </a>
-              <a class="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" href="#">
-                Register
-              </a>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Agricon</h1>
+          <p class="subtitle">Connecting farmers directly with retailers and consumers.</p>
+          <p>Agricon is a platform that empowers farmers to sell their products directly to retailers and consumers, cutting out the middleman and ensuring fair prices for all.</p>
+          <div class="cta-buttons">
+            <a href="#" class="button primary">Shop Now</a>
+            <a href="#" class="button secondary">Register</a>
+          </div>
+        </div>
+      </section>
+      <section class="mission">
+        <div class="container">
+          <div class="grid">
+            <div class="column">
+              <div class="tag">Our Mission</div>
+              <h2>Empowering Farmers, Connecting Communities</h2>
+              <p>Agricon's mission is to create a more equitable and sustainable food system by connecting farmers directly with retailers and consumers. We believe that by eliminating the middleman, we can ensure that farmers receive fair prices for their products and that consumers have access to fresh, high-quality produce.</p>
+            </div>
+            <div class="column">
+              <div class="tag">Benefits</div>
+              <p>Agricon offers a range of benefits to both farmers and consumers. Farmers can sell their products directly to retailers and consumers, cutting out the middleman and ensuring fair prices. Consumers can access fresh, locally sourced produce at competitive prices, while supporting their local farming community.</p>
+              <a href="#" class="button primary">Register as a Farmer</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="w-full py-12 md:py-24 lg:py-32 bg-muted">
-        <div class="container px-4 md:px-6">
-          <div class="grid gap-10 sm:px-10 md:gap-16 md:grid-cols-2">
-            <div class="space-y-4">
-              <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Mission</div>
-              <h2 class="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">Empowering Farmers, Connecting Communities</h2>
-              <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                Agricon's mission is to create a more equitable and sustainable food system by connecting farmers
-                directly with retailers and consumers. We believe that by eliminating the middleman, we can ensure
-                that farmers receive fair prices for their products and that consumers have access to fresh,
-                high-quality produce.
-              </p>
+      <section class="how-it-works">
+        <div class="container">
+          <div class="grid">
+            <div class="column">
+              <div class="tag">How it Works</div>
+              <h2>A Simple, Streamlined Process</h2>
+              <p>Agricon's platform is designed to be easy to use for both farmers and consumers. Farmers can create an account, list their products, and start selling directly to retailers and consumers. Consumers can browse the platform, place orders, and have their products delivered directly to their doorstep.</p>
+              <a href="#" class="button primary">Start Shopping</a>
             </div>
-            <div class="flex flex-col items-start space-y-4">
-              <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Benefits</div>
-              <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                Agricon offers a range of benefits to both farmers and consumers. Farmers can sell their products
-                directly to retailers and consumers, cutting out the middleman and ensuring fair prices. Consumers can
-                access fresh, locally sourced produce at competitive prices, while supporting their local farming
-                community.
-              </p>
-              <a class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" href="#">
-                Register as a Farmer
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="w-full py-12 md:py-24 lg:py-32">
-        <div class="container px-4 md:px-6">
-          <div class="grid gap-10 sm:px-10 md:gap-16 md:grid-cols-2">
-            <div class="space-y-4">
-              <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">How it Works</div>
-              <h2 class="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">A Simple, Streamlined Process</h2>
-              <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                Agricon's platform is designed to be easy to use for both farmers and consumers. Farmers can create an
-                account, list their products, and start selling directly to retailers and consumers. Consumers can
-                browse the platform, place orders, and have their products delivered directly to their doorstep.
-              </p>
-              <a class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" href="#">
-                Start Shopping
-              </a>
-            </div>
-            <div class="flex flex-col items-start space-y-4">
-              <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Why Agricon?</div>
-              <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                Agricon was founded with the goal of creating a more equitable and sustainable food system. By
-                connecting farmers directly with retailers and consumers, we're able to eliminate the middleman and
-                ensure that both farmers and consumers get a fair deal. Our platform is designed to be user-friendly
-                and accessible, making it easy for everyone to participate in the local food economy.
-              </p>
-              <a class="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" href="#">
-                Learn More
-              </a>
+            <div class="column">
+              <div class="tag">Why Agricon?</div>
+              <p>Agricon was founded with the goal of creating a more equitable and sustainable food system. By connecting farmers directly with retailers and consumers, we're able to eliminate the middleman and ensure that both farmers and consumers get a fair deal. Our platform is designed to be user-friendly and accessible, making it easy for everyone to participate in the local food economy.</p>
+              <a href="#" class="button secondary">Learn More</a>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-      <p class="text-xs text-muted-foreground">© 2024 Agricon. All rights reserved.</p>
-      <nav class="sm:ml-auto flex gap-4 sm:gap-6">
-        <a class="text-xs hover:underline underline-offset-4" href="#">Terms of Service</a>
-        <a class="text-xs hover:underline underline-offset-4" href="#">Privacy</a>
+    <footer class="footer">
+      <p>&copy; 2024 Agricon. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy</a>
       </nav>
     </footer>
   </div>
