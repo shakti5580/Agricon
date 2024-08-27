@@ -1,258 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agricon - Connecting Farmers, Retailers, and Consumers</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    :root {
-      --background: 36 39% 88%;
-      --foreground: 36 45% 15%;
-      --primary: 36 45% 70%;
-      --primary-foreground: 36 45% 11%;
-      --secondary: 40 35% 77%;
-      --secondary-foreground: 36 45% 25%;
-      --accent: 36 64% 57%;
-      --accent-foreground: 36 72% 17%;
-      --destructive: 0 84% 37%;
-      --destructive-foreground: 0 0% 98%;
-      --muted: 36 33% 75%;
-      --muted-foreground: 36 45% 25%;
-      --card: 36 46% 82%;
-      --card-foreground: 36 45% 20%;
-      --popover: 0 0% 100%;
-      --popover-foreground: 240 10% 3.9%;
-      --border: 36 45% 60%;
-      --input: 36 45% 60%;
-      --ring: 36 45% 30%;
-      --chart-1: 25 34% 28%;
-      --chart-2: 26 36% 34%;
-      --chart-3: 28 40% 40%;
-      --chart-4: 31 41% 48%;
-      --chart-5: 35 43% 53%;
-      --radius: 0rem;
-    }
-    body {
-      font-family: 'Space Mono', monospace;
-      background-color: hsl(var(--background));
-      color: hsl(var(--foreground));
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'DM Sans', sans-serif;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricon</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="flex flex-col min-h-screen">
-  <header class="bg-primary text-primary-foreground px-4 lg:px-6 h-14 flex items-center">
-    <div class="container mx-auto flex justify-between items-center">
-      <a class="flex items-center justify-center" href="#" aria-label="Agricon Home">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-6 w-6"
-          aria-hidden="true"
-        >
-          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-        </svg>
-        <span class="text-xl font-bold ml-2">Agricon</span>
-      </a>
-      <nav class="flex gap-4 sm:gap-6">
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="#shop">Shop</a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="dashboard.html">Register (Farmer)</a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="#about">About</a>
-        <a class="text-sm font-medium hover:underline underline-offset-4" href="#contact">Contact</a>
-      </nav>
+
+<body>
+    <div class="flex flex-col min-h-screen">
+        <header class="px-4 lg:px-6 h-14 flex items-center">
+            <a href="#" class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path
+                        d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z">
+                    </path>
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                </svg>
+                <span class="text-xl font-bold">Agricon</span>
+            </a>
+            <nav class="ml-auto flex gap-4 sm:gap-6">
+                <a href="#" class="text-sm font-medium hover:underline underline-offset-4">Shop</a>
+                <a href="#" class="text-sm font-medium hover:underline underline-offset-4">Register (farmer)</a>
+                <a href="#" class="text-sm font-medium hover:underline underline-offset-4">About</a>
+                <a href="#" class="text-sm font-medium hover:underline underline-offset-4">Contact</a>
+            </nav>
+        </header>
+
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="w-full py-12 md:py-24 lg:py-32 bg-primary">
+                <div class="container px-4 md:px-6">
+                    <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
+                        <div class="flex flex-col justify-center space-y-4">
+                            <div class="space-y-2">
+                                <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl text-primary-foreground">
+                                    Connecting Farmers Directly to Retailers and Consumers
+                                </h1>
+                                <p class="max-w-[600px] text-primary-foreground/80 md:text-xl">
+                                    Agricon is revolutionizing the way farmers, retailers, and consumers interact. Our
+                                    platform enables direct connections, ensuring fresh produce, fair prices, and
+                                    sustainable practices.
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-2 min-[400px]:flex-row">
+                                <a href="#"
+                                    class="inline-flex h-10 items-center justify-center rounded-md bg-primary-foreground px-8 text-sm font-medium text-primary shadow transition-colors hover:bg-primary-foreground/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">Shop
+                                    Now</a>
+                                <a href="#"
+                                    class="inline-flex h-10 items-center justify-center rounded-md border border-primary-foreground bg-primary px-8 text-sm font-medium shadow-sm transition-colors hover:bg-primary-foreground hover:text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">Learn
+                                    More</a>
+                            </div>
+                        </div>
+                        <img src="/placeholder.svg" width="550" height="550" alt="Hero"
+                            class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advantage Section -->
+            <section class="w-full py-12 md:py-24 lg:py-32">
+                <div class="container px-4 md:px-6">
+                    <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">The Agricon Advantage</h2>
+                            <p
+                                class="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                Agricon's platform connects farmers directly with retailers and consumers, ensuring fresh
+                                produce, fair prices, and sustainable practices.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+                        <div class="flex flex-col justify-center space-y-4">
+                            <ul class="grid gap-6">
+                                <li>
+                                    <div class="grid gap-1">
+                                        <h3 class="text-xl font-bold">Fresh Produce</h3>
+                                        <p class="text-muted-foreground">
+                                            Enjoy the freshest fruits and vegetables, directly sourced from local
+                                            farmers.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="grid gap-1">
+                                        <h3 class="text-xl font-bold">Fair Prices</h3>
+                                        <p class="text-muted-foreground">
+                                            Eliminate middlemen and enjoy fair, transparent pricing for both farmers and
+                                            consumers.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="grid gap-1">
+                                        <h3 class="text-xl font-bold">Sustainable Practices</h3>
+                                        <p class="text-muted-foreground">
+                                            Support local agriculture and reduce your carbon footprint with Agricon's
+                                            sustainable model.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="/placeholder.svg" width="550" height="310" alt="Image"
+                            class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits Section -->
+            <section class="w-full py-12 md:py-24 lg:py-32 bg-muted">
+                <div class="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+                    <div class="space-y-2">
+                        <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">Benefits for Farmers,
+                            Retailers, and Consumers</h2>
+                        <p
+                            class="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            Agricon's platform creates a win-win-win scenario for all stakeholders, ensuring fresh
+                            produce, fair prices, and sustainable practices.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
+                        <a href="#"
+                            class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">Shop
+                            Now</a>
+                        <a href="#"
+                            class="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">Learn
+                            More</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section class="w-full py-12 md:py-24 lg:py-32">
+                <div class="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+                    <div class="space-y-3">
+                        <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">Meet the Agricon Team</h2>
+                        <p
+                            class="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            Our passionate team is dedicated to revolutionizing the agricultural industry and creating a
+                            more sustainable future.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                        <div class="flex flex-col items-center space-y-2">
+                            <img src="/placeholder.svg" width="80" height="80" alt="Team Member" class="rounded-full">
+                            <div class="text-center">
+                                <h4 class="font-medium">JENISH</h4>
+                                <p class="text-sm text-muted-foreground">TEAM</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center space-y-2">
+                            <img src="/placeholder.svg" width="80" height="80" alt="Team Member" class="rounded-full">
+                            <div class="text-center">
+                                <h4 class="font-medium">ADITYA</h4>
+                                <p class="text-sm text-muted-foreground">TEAM</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center space-y-2">
+                            <img src="/placeholder.svg" width="80" height="80" alt="Team Member" class="rounded-full">
+                            <div class="text-center">
+                                <h4 class="font-medium">VENUS</h4>
+                                <p class="text-sm text-muted-foreground">TEAM</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center space-y-2">
+                            <img src="/placeholder.svg" width="80" height="80" alt="Team Member" class="rounded-full">
+                            <div class="text-center">
+                                <h4 class="font-medium">SHAKTI</h4>
+                                <p class="text-sm text-muted-foreground">TEAM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="w-full py-12 md:py-24 lg:py-32 border-t">
+                <div class="container px-4 md:px-6">
+                    <div class="grid gap-10 sm:px-10 md:gap-16 md:grid-cols-2">
+                        <div class="space-y-4">
+                            <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Testimonials</div>
+                            <h2
+                                class="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+                                What Our Customers Say
+                            </h2>
+                            <div class="grid gap-4">
+                                <div class="rounded-md border p-4 shadow-sm">
+                                    <p class="text-muted-foreground">
+                                        "Agricon has been a game-changer for my small farm. The direct connection to
+                                        consumers has allowed me to sell my produce at fair prices and reduce food
+                                        waste."
+                                    </p>
+                                    <div class="mt-4 flex items-center">
+                                        <img src="/placeholder.svg" width="40" height="40" alt="Customer"
+                                            class="rounded-full">
+                                        <div class="ml-3">
+                                            <h4 class="font-medium">Sarah Johnson</h4>
+                                            <p class="text-sm text-muted-foreground">Organic Farmer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rounded-md border p-4 shadow-sm">
+                                    <p class="text-muted-foreground">
+                                        "As a small business owner, Agricon has been a lifesaver. I can now source
+                                        high-quality produce directly from local farmers, which has improved my product
+                                        quality and customer satisfaction."
+                                    </p>
+                                    <div class="mt-4 flex items-center">
+                                        <img src="/placeholder.svg" width="40" height="40" alt="Customer"
+                                            class="rounded-full">
+                                        <div class="ml-3">
+                                            <h4 class="font-medium">Michael Lee</h4>
+                                            <p class="text-sm text-muted-foreground">Cafe Owner</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start space-y-4">
+                            <div class="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Get Started</div>
+                            <p
+                                class="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
+                                Join the Agricon community and start enjoying the benefits of fresh, locally-sourced
+                                produce. Sign up today to become a farmer, retailer, or consumer.
+                            </p>
+                            <a href="#"
+                                class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">Register
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+            <p class="text-xs text-muted-foreground">&copy; 2024 Agricon. All rights reserved.</p>
+            <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+                <a href="#" class="text-xs hover:underline underline-offset-4">Shop</a>
+                <a href="#" class="text-xs hover:underline underline-offset-4">Register</a>
+            </nav>
+        </footer>
     </div>
-  </header>
-
-  <main class="flex-grow">
-    <section class="bg-primary text-primary-foreground py-12 md:py-24 lg:py-32">
-      <div class="container mx-auto px-4 md:px-6">
-        <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          <div class="flex flex-col justify-center space-y-4">
-            <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-              Connecting Farmers Directly to Retailers and Consumers
-            </h1>
-            <p class="max-w-[600px] text-primary-foreground/80 md:text-xl">
-              Agricon is revolutionizing the way farmers, retailers, and consumers interact. Our platform enables
-              direct connections, ensuring fresh produce, fair prices, and sustainable practices.
-            </p>
-            <div class="flex flex-col gap-2 min-[400px]:flex-row">
-              <a
-                class="inline-flex h-10 items-center justify-center rounded-md bg-primary-foreground px-8 text-sm font-medium text-primary shadow transition-colors hover:bg-primary-foreground/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                href="#shop"
-              >
-                Shop Now
-              </a>
-              <a
-                class="inline-flex h-10 items-center justify-center rounded-md border border-primary-foreground bg-primary px-8 text-sm font-medium shadow-sm transition-colors hover:bg-primary-foreground hover:text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                href="#learn-more"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-          <img
-            src="photo-1500937386664-56d1dfef3854.jpg"
-            width="600"
-            height="600"
-            alt="Farm landscape showcasing agricultural practices"
-            class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="py-12 md:py-24 lg:py-32">
-      <div class="container mx-auto px-4 md:px-6">
-        <div class="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">The Agricon Advantage</h2>
-          <p class="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Agricon's platform connects farmers directly with retailers and consumers, ensuring fresh produce,
-            fair prices, and sustainable practices.
-          </p>
-        </div>
-        <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-          <div class="flex flex-col justify-center space-y-4">
-            <ul class="grid gap-6">
-              <li>
-                <h3 class="text-xl font-bold">Fresh Produce</h3>
-                <p class="text-muted-foreground">
-                  Enjoy the freshest fruits and vegetables, directly sourced from local farmers.
-                </p>
-              </li>
-              <li>
-                <h3 class="text-xl font-bold">Fair Prices</h3>
-                <p class="text-muted-foreground">
-                  Eliminate middlemen and enjoy fair, transparent pricing for both farmers and consumers.
-                </p>
-              </li>
-              <li>
-                <h3 class="text-xl font-bold">Sustainable Practices</h3>
-                <p class="text-muted-foreground">
-                  Support local agriculture and reduce your carbon footprint with Agricon's sustainable model.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <img
-            src="https://source.unsplash.com/random/800x600?vegetables,fruits"
-            width="550"
-            height="310"
-            alt="Fresh produce display"
-            class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section id="benefits" class="bg-muted py-12 md:py-24 lg:py-32">
-      <div class="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
-        <div class="space-y-2">
-          <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-            Benefits for Farmers, Retailers, and Consumers
-          </h2>
-          <p class="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Agricon's platform creates a win-win-win scenario for all stakeholders, ensuring fresh produce, fair
-            prices, and sustainable practices.
-          </p>
-        </div>
-        <div class="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
-          <a
-            class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            href="#shop"
-          >
-            Shop Now
-          </a>
-          <a
-            class="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            href="#learn-more"
-          >
-            Learn More
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" class="py-12 md:py-24 lg:py-32">
-      <div class="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
-        <div class="space-y-3">
-          <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">Meet the Agricon Team</h2>
-          <p class="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Our passionate team is dedicated to revolutionizing the agricultural industry and creating a more
-            sustainable future.
-          </p>
-        </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          <div class="flex flex-col items-center space-y-2">
-            <img
-              src="https://source.unsplash.com/random/80x80?portrait,woman"
-              width="80"
-              height="80"
-              alt="Jane Doe"
-              class="rounded-full"
-            />
-            <p class="font-semibold">Jane Doe</p>
-            <p class="text-sm text-muted-foreground">CEO</p>
-          </div>
-          <div class="flex flex-col items-center space-y-2">
-            <img
-              src="https://source.unsplash.com/random/80x80?portrait,man"
-              width="80"
-              height="80"
-              alt="John Smith"
-              class="rounded-full"
-            />
-            <p class="font-semibold">John Smith</p>
-            <p class="text-sm text-muted-foreground">CTO</p>
-          </div>
-          <div class="flex flex-col items-center space-y-2">
-            <img
-              src="https://source.unsplash.com/random/80x80?portrait,woman"
-              width="80"
-              height="80"
-              alt="Emily Brown"
-              class="rounded-full"
-            />
-            <p class="font-semibold">Emily Brown</p>
-            <p class="text-sm text-muted-foreground">COO</p>
-          </div>
-          <div class="flex flex-col items-center space-y-2">
-            <img
-              src="https://source.unsplash.com/random/80x80?portrait,man"
-              width="80"
-              height="80"
-              alt="Michael Johnson"
-              class="rounded-full"
-            />
-            <p class="font-semibold">Michael Johnson</p>
-            <p class="text-sm text-muted-foreground">Head of Partnerships</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-muted text-muted-foreground border-t border-muted py-4">
-    <div class="container mx-auto flex flex-col items-center px-4 md:px-6">
-      <p class="text-sm">
-        &copy; 2024 Agricon. All rights reserved.
-      </p>
-      <nav class="flex gap-4 mt-2">
-        <a class="text-sm hover:underline" href="#privacy">Privacy Policy</a>
-        <a class="text-sm hover:underline" href="#terms">Terms of Service</a>
-      </nav>
-    </div>
-  </footer>
 </body>
+
 </html>
