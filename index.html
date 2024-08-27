@@ -106,6 +106,111 @@
             border-radius: var(--radius);
         }
 
+        /* Updated Agricon Advantage styles */
+        .agricon-advantage {
+            background-color: #f5efe6;
+            padding: 4rem 0;
+        }
+
+        .agricon-advantage h2 {
+            font-size: 48px;
+            color: #3c2a21;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .agricon-advantage .subtitle {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+            color: #5c4033;
+        }
+
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .advantage-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .advantage-item {
+            margin-bottom: 30px;
+        }
+
+        .advantage-item h3 {
+            font-size: 24px;
+            color: #3c2a21;
+            margin-bottom: 10px;
+        }
+
+        .advantage-item p {
+            color: #5c4033;
+        }
+
+        .image-placeholder {
+            background-color: #e0d8c9;
+            width: 100%;
+            padding-bottom: 100%; /* Creates a square aspect ratio */
+            border-radius: 8px;
+        }
+
+        /* Benefits section styles */
+        .benefits {
+            background-color: #d2c5b0;
+            padding: 4rem 0;
+        }
+
+        .benefits-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .benefits-text {
+            max-width: 60%;
+        }
+
+        .benefits h2 {
+            font-size: 48px;
+            color: #3c2a21;
+            margin-bottom: 20px;
+        }
+
+        .benefits p {
+            font-size: 18px;
+            color: #3c2a21;
+            margin-bottom: 30px;
+        }
+
+        .benefits-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .benefits-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .benefits-button.primary {
+            background-color: #c4b299;
+            color: #3c2a21;
+        }
+
+        .benefits-button.secondary {
+            background-color: #f5efe6;
+            color: #3c2a21;
+        }
+
+        /* Team styles */
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -129,6 +234,37 @@
             padding: 1rem;
             text-align: center;
             border-top: 1px solid var(--border);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .hero-content,
+            .advantage-grid,
+            .benefits-content {
+                grid-template-columns: 1fr;
+            }
+
+            .agricon-advantage h2,
+            .benefits h2 {
+                font-size: 36px;
+            }
+
+            .agricon-advantage .subtitle,
+            .benefits p {
+                font-size: 16px;
+            }
+
+            .benefits-text {
+                max-width: 100%;
+            }
+
+            .benefits-buttons {
+                flex-direction: column;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
         }
     </style>
 </head>
@@ -164,22 +300,51 @@
             </div>
         </section>
 
-        <section>
+        <section class="agricon-advantage">
             <div class="container">
                 <h2>The Agricon Advantage</h2>
-                <p>Agricon's platform connects farmers directly with retailers and consumers, ensuring fresh produce, fair prices, and sustainable practices.</p>
-                <div class="grid">
-                    <div>
-                        <h3>Fresh Produce</h3>
-                        <p>Enjoy the freshest fruits and vegetables, directly sourced from local farmers.</p>
+                <p class="subtitle">
+                    Agricon's platform connects farmers directly with retailers and consumers, ensuring fresh
+                    produce, fair prices, and sustainable practices.
+                </p>
+                <div class="advantage-grid">
+                    <ul class="advantage-list">
+                        <li class="advantage-item">
+                            <h3>Fresh Produce</h3>
+                            <p>
+                                Enjoy the freshest fruits and vegetables, directly sourced from local farmers.
+                            </p>
+                        </li>
+                        <li class="advantage-item">
+                            <h3>Fair Prices</h3>
+                            <p>
+                                Eliminate middlemen and enjoy fair, transparent pricing for both farmers and consumers.
+                            </p>
+                        </li>
+                        <li class="advantage-item">
+                            <h3>Sustainable Practices</h3>
+                            <p>
+                                Support local agriculture and reduce your carbon footprint with Agricon's sustainable model.
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="image-placeholder" role="img" aria-label="Agricon Advantage Illustration"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <div class="benefits-content">
+                    <div class="benefits-text">
+                        <h2>Benefits for Farmers, Retailers, and Consumers</h2>
+                        <p>
+                            Agricon's platform creates a win-win-win scenario for all stakeholders, ensuring fresh produce, fair prices, and sustainable practices.
+                        </p>
                     </div>
-                    <div>
-                        <h3>Fair Prices</h3>
-                        <p>Eliminate middlemen and enjoy fair, transparent pricing for both farmers and consumers.</p>
-                    </div>
-                    <div>
-                        <h3>Sustainable Practices</h3>
-                        <p>Support local agriculture and reduce your carbon footprint with Agricon's sustainable model.</p>
+                    <div class="benefits-buttons">
+                        <a href="#" class="benefits-button primary">Shop Now</a>
+                        <a href="#" class="benefits-button secondary">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -192,21 +357,31 @@
                 <div class="team-grid">
                     <div class="team-member">
                         <img src="150.jpg" alt="John Doe">
-                        <h4>JENISH</h4>
+                        <h4>ANUSHKA</h4>
                         <p>TEAM</p>
                     </div>
                     <div class="team-member">
                         <img src="150.jpg" alt="Jane Smith">
-                        <h4>ADITYA</h4>
+                        <h4>VAISHALI</h4>
                         <p>TEAM</p>
                     </div>
                     <div class="team-member">
                         <img src="150.jpg" alt="Michael Johnson">
-                        <h4>VENUS</h4>
+                        <h4>ADITYA</h4>
                         <p>TEAM</p>
                     </div>
                     <div class="team-member">
                         <img src="150.jpg" alt="Emily Davis">
+                        <h4>JENISH</h4>
+                        <p>TEAM</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="150.jpg" alt="David Wilson">
+                        <h4>VENUS</h4>
+                        <p>TEAM</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="150.jpg" alt="Sarah Brown">
                         <h4>SHAKTI</h4>
                         <p>TEAM</p>
                     </div>
